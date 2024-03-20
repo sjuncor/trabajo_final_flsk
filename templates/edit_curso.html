@@ -1,0 +1,31 @@
+<div class="modal fade" id="editarCursoModal{{ c.0 }}" tabindex="-1" aria-labelledby="editarCursoModalLabel{{ c.0 }}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarCursoModalLabel{{ c.0 }}">Editar curso ingresado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/update/{{ c.0 }}" method="post">
+                    <div class="mb-3">
+                        <label for="codigo" class="form-label">Código del Curso</label>
+                        <input type="text" name="codigo" class="form-control" id="codigo" size="5" value="{{ c.1 }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre del Curso</label>
+                        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre del curso" value="{{ c.2 }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="horas" class="form-label">Número de horas del curso</label>
+                        <input type="text" name="horas" class="form-control" id="horas" size="5" value="{{ c.3 }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="area" class="form-label">Área de conocimiento</label>
+                        <input type="text" name="area" class="form-control" id="area" value="{{ c.4 }}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Modificar curso</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

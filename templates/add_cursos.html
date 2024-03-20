@@ -1,0 +1,31 @@
+<div class="modal fade" id="agregarCursoModal" tabindex="-1" aria-labelledby="agregarCursoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="agregarCursoModalLabel">Ingreso de nuevos cursos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ url_for('add_cursos') }}" method="post">
+                    <div class="mb-3">
+                        <label for="codigo" class="form-label">Código del Curso</label>
+                        <input type="text" class="form-control" name="codigo" id="codigo" size="5">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre del Curso</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese nombre del curso">
+                    </div>
+                    <div class="mb-3">
+                        <label for="horas" class="form-label">Número de horas del curso</label>
+                        <input type="text" class="form-control" name="horas" id="horas" size="5">
+                    </div>
+                    <div class="mb-3">
+                        <label for="area" class="form-label">Área de conocimiento</label>
+                        <input type="text" class="form-control" name="area" id="area">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2">Agregar curso</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
